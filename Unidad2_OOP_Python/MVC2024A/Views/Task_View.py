@@ -4,18 +4,21 @@ class TaskView:
         pass
 
     def showAllTasks(self, tasks:list):
-        pass
+        print("Lista de tareas")
+        for index, task in enumerate(tasks):
+            print(f"{index} - {task.getDescription()} - {task.getFinished()}")
 
     def showFinishedTasks(self, tasks: list):
-        for e in tasks:
-            if e.getFinished():
-                print(e.getDescription())
-            
+        print("Tareas finalizadas")
+        for task in tasks:
+            if task.getFinished():
+                print(task.getDescription())
 
     def showUnfinishedTasks(self, tasks):
-        for e in tasks:
-            if not e.getFinished():
-                print(e.getDescription())
+        print("Tareas pendientes")
+        for task in tasks:
+            if not task.getFinished():
+                print(task.getDescription())
 
     def getUserInput(self):
         return input("Ingrese el índice de la tarea:")
