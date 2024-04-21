@@ -1,7 +1,0 @@
-Links externos de referencia:
-
-https://refactoring.guru/design-patterns/catalog
-
-https://python-patterns.guide/
-
-https://realpython.com/python3-object-oriented-programming/
