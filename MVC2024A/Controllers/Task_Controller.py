@@ -1,15 +1,16 @@
 from Views import Task_View
 from Models import Task_Model
+from Strategies.Strategy import DevelopmentStateChangeStrategy, TestingStateChangeStrategy
 
 class TaskController:
 
-    def __init__(self):
+    def __init__(self, state_strategy):
 
         #referencia al modelo:
         self.tasks = []
-
         #referencia a la vista 
         self.view = Task_View.TaskView()
+        self.state_strategy = state_strategy()
 
     def add_task(self, task):
         self.tasks.append(task)
