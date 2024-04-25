@@ -3,6 +3,16 @@ class TaskView:
     def __init__(self):
         pass
 
+    def getMenu(self):
+        print("Menú de tareas")
+        print("1. Mostrar todas las tareas")
+        print("2. Mostrar tareas finalizadas")
+        print("3. Mostrar tareas pendientes")
+        print("4. Finalizar tarea")
+        print("5. Agregar tarea")
+        print("6. Salir")
+        return input("Ingrese una opción:")
+
     def showAllTasks(self, tasks:list):
         print("Lista de tareas")
         for index, task in enumerate(tasks):
@@ -11,6 +21,7 @@ class TaskView:
     def showFinishedTasks(self, tasks: list):
         print("Tareas finalizadas")
         for task in tasks:
+            print(type(task))
             if task.getFinished():
                 print(task.getDescription())
 
