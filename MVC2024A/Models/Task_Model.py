@@ -1,24 +1,28 @@
+from Models.Engineer_Model import Engineer
+
 class Task:
 
-    def __init__(self, description, duration, project, developer):
+    def __init__(self, description, engineer: Engineer, typeTask):
         self.description = description
-        self.duration = duration 
-        self.project = project
-        self.developer = developer
+        self.engineer = engineer
+        self.type = typeTask
         self.finished = False
+        self.state = "inicio"
 
-    def changeDuration(self, newDuration):
-        self.duration = newDuration
-        
     def finishTask(self):
         self.finished = True
-
-    def toggleFinished(self):
-        self.finished = not self.finished
 
     def getFinished(self):
         return self.finished
     
     def getDescription(self):
         return self.description
+
+    def getengineer(self):
+        return self.engineer
+    
+    def getState(self):
+        return self.state
+    
+
 
